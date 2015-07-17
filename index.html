@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mega Millions | Dream Team</title>
+    <script src="https://code.angularjs.org/1.4.1/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.1/angular-route.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<!--    todo:for some reason the page wont recognize willWeRetireApp yet loads angular (check console in dev tools)-->
+<body ng-app="willWeRetireApp">
+    <div ng-view></div>
+<!--    todo:swap most of the following content to use ngRoute-->
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="row">
+                <div class="large-12 columns">
+                    <nav class="top-bar" data-topbar>
+                        <ul class="title-area">
+                            <li class="name">
+                                <h1><a href="#">Mega-Millions Lottery Pool</a></h1>
+                            </li>
+                            <li class="toggle-topbar menu-icon">
+                                <a href="#"><span>menu</span></a>
+                            </li>
+                        </ul>
+                        <section class="top-bar-section">
+                            <ul class="right">
+                                <li class="divider"></li>
+                                <li class="has-dropdown">
+                                    <a href="#">Prior Results</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <label>Month | Year</label>
+                                        </li>
+                                        <li>
+                                            <a class="" href="#/friendship">January | 2015 </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a class="" href="#/mystery">February | 2015 </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a class="" href="#/respoect">March | 2015 </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a class="" href="#">April | 2015 </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a class="" href="#">May | 2015 </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a class="" href="#">June | 2015 </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">Statistics</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#/payChris" id="pay-chris" style="background: red">Pay Chris</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+            <br/>
+
+            <!--Set up the modals required on the page-->
+            <a href="#" data-reveal-id="myModal">
+                <img src="images/Sandii_carrying_Erin_EF_2015.jpg" radius="500px x 500px" />
+
+                <row small-12 columns>
+                    <div class="small-4 columns"></div>
+                    <div class="small-4 columns"></div>
+                    <div class="small-4 columns"></div>
+                </row>
+            </a>
+
+            <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                <h2 id="modalTitle">Modal's for days</h2>
+                <p class="lead">My couch. It is mine.</p>
+                <div>First name:
+                    <input type="text" ng-model="userFirstName" />
+                </div>
+                <div>Last name:
+                    <input type="text" ng-model="userLastName" />
+                </div>
+                <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+            </div>
+            <!--end modal-->
+
+<!--            todo:replace placeholder pictures with graphics, panels, etc-->
+            <row>
+                <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2">
+                    <li>
+                        <a href="#/friendship">
+                            <img src="images/Sandii_carrying_Erin_EF_2015.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/illuminarium">
+                            <img src="images/Illuminarium_EF_2015.jpg" class="th">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/respect">
+                            <img src="images/the_gang.jpg" class="th">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/tarot">
+                            <img src="images/wheel_of_doors_EF_2015.jpg" class="th">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/hippieShowers">
+                            <img src="images/hippie_beah_EF_2015.jpg" class="th">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/usedToBeSoHipster">
+                            <img src="images/Library_EF_2015.jpg" class="th" />
+                        </a>
+                    </li>
+                </ul>
+            </row>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+    <link rel="stylesheet" href="index.css">
+</body>
+</html>
