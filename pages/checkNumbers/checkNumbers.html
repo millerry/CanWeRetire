@@ -1,0 +1,26 @@
+<div>
+    Year (YYYY, all 4 digits!)
+    <input id="year" type="text" />
+</div>
+<div>
+    Month (MM, 0-pad, 2 digits!)
+    <input id="month" type="text" />
+</div>
+<div>
+    Boards (JSON please, see sample!)<br />
+    <textarea id="boards" cols="40" rows="20">
+{
+    "boards":[
+        {"numbers":"01 02 03 04 05","mega_ball":"01"},
+        {"numbers":"06 07 08 09 10","mega_ball":"02"}
+    ]
+}
+    </textarea>
+</div>
+<div>
+    <button id="checkEm" onclick="checkEm()">Check 'Em</button>
+</div>
+<div>
+    Results:<br />
+    <pre id="results"></pre>
+</div>
