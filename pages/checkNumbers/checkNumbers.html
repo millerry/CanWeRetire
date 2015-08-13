@@ -1,14 +1,23 @@
-<div>
-    Year (YYYY, all 4 digits!)
-    <input id="year" type="text" />
+<div class="row">
+    <div class="small-6 columns end">
+        Year (YYYY, all 4 digits!)
+        <input id="year" type="text"/>
+    </div>
 </div>
-<div>
-    Month (MM, 0-pad, 2 digits!)
-    <input id="month" type="text" />
+<div class="row">
+    <div class="small-6 columns end">
+        Month (MM, 0-pad, 2 digits!)
+        <input id="month" type="text"/>
+    </div>
 </div>
-<div>
-    Boards (JSON please, see sample!)<br />
-    <textarea id="boards" cols="40" rows="20">
+<div class="row">
+    <div class="small-6 columns end">
+        Boards (JSON please, see sample!)
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="small-6 columns end"><textarea id="boards" cols="40" rows="20">
 {
     "boards":[
         {"numbers":"01 02 03 04 05","mega_ball":"01"},
@@ -16,11 +25,16 @@
     ]
 }
     </textarea>
+    </div>
 </div>
-<div>
-    <button id="checkEm" onclick="checkEm()">Check 'Em</button>
+<div class="row">
+    <div class="small-6 columns end">
+        <button id="checkEm" onclick="checkEm()">Check 'Em</button>
+    </div>
 </div>
-<div>
-    Results:<br />
+<div class="row">
+    <div class="small-6 columns end">
+        Results:<br/>
     <pre id="results"></pre>
+        </div>
 </div>

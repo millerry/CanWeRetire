@@ -58,10 +58,13 @@ function resultsReturned(data, textStatus, jqXHR) {
         });
     });
     $("#results").html(JSON.stringify(winners, null, 2));
+    console.timeEnd("Time to retrieve numbers from API:");
 }
 
 function checkEm() {
     'use strict';
+    console.log('%cCalculating time required to call the API starting now!', 'color:blue;');
+    console.time("Time to retrieve numbers from API:");
     var myNumbers = getNumbers();
     if (myNumbers.month !== undefined && myNumbers.month.length === 2 && myNumbers.year !== undefined && myNumbers.year.length === 4) {
         var nextMonth = parseInt(myNumbers.month) + 1;
